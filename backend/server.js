@@ -11,11 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 connectDB().then(() => {
-  console.log("✅ MongoDB connected, starting server...");
+  console.log("MongoDB connected, starting server...");
   app.use("/", professionalRoutes);
 
   app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log(`Server running at port: ${PORT}`);
   });
 }).catch(err => {
   console.error("❌ Failed to connect to MongoDB:", err);
